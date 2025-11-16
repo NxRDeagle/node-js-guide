@@ -1,4 +1,4 @@
 const { parentPort, workerData } = require("worker_threads");
-const { compute } = require("./exercise/factorial.js");
+const { compute } = require("../exercise/factorial.js");
 
 parentPort.postMessage(compute(workerData));

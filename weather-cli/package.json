@@ -1,0 +1,25 @@
+{
+  "name": "weather-cli-nordeagle",
+  "version": "1.0.0",
+  "description": "CLI for getting weather",
+  "license": "ISC",
+  "author": "nordeagle",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "weather": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "cli",
+    "weather"
+  ],
+  "dependencies": {
+    "axios": "^1.13.2",
+    "chalk": "^5.6.2",
+    "dedent-js": "^1.0.1"
+  }
+}
