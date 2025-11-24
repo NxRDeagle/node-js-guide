@@ -9,6 +9,7 @@ export const TYPES = {
 	UserController: Symbol.for('UserController'),
 	UserService: Symbol.for('UserService'),
 	ExceptionFilter: Symbol.for('ExceptionFilter'),
+	ConfigService: Symbol.for('ConfigService'),
 };
 
 export type ExpressFunction = (request: Request, response: Response, next: NextFunction) => void;

@@ -11,7 +11,7 @@ export class ExceptionFilter implements IExceptionFilter {
 
 	catch(error: Error | HTTPError, request: Request, response: Response, next: NextFunction) {
 		if (error instanceof HTTPError) {
-			this.logger.error(`[${error?.context}] Ошибка ${error.statusCode} : ${error.message}`);
+			this.logger.error(`[${error?.context}] Error ${error.statusCode} : ${error.message}`);
 			response.status(error.statusCode).send({ error: error.message });
 		} else {
 			this.logger.error(`${error.message}`);
