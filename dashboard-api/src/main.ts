@@ -7,12 +7,15 @@ import { ILogger } from './logger/logger.interface';
 import { UserController } from './users/users.controller';
 import { IUserController } from './users/users.controller.interface';
 import { IBootstrapReturn, TYPES } from './types';
+import { IUserService } from './users/users.service.interface';
+import { UserService } from './users/users.service';
 import 'reflect-metadata';
 
 const appBindings = new ContainerModule((options: ContainerModuleLoadOptions) => {
 	options.bind<ILogger>(TYPES.ILogger).to(LoggerService);
 	options.bind<IExceptionFilter>(TYPES.ExceptionFilter).to(ExceptionFilter);
 	options.bind<IUserController>(TYPES.UserController).to(UserController);
+	options.bind<IUserService>(TYPES.UserService).to(UserService);
 	options.bind<App>(TYPES.Application).to(App);
 });
 

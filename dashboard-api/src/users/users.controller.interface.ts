@@ -1,6 +1,6 @@
-import { ExpressFunction } from "../types";
+import { ExpressFunction } from '../types';
 
 export interface IUserController {
-  register: ExpressFunction;
-  login: ExpressFunction;
+	register: ExpressFunction;
+	login: ExpressFunction;
 }
