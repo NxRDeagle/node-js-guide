@@ -34,4 +34,8 @@ export class UserService implements IUserService {
 		const user = new User(existUser.email, existUser.name, existUser.password);
 		return user.comparePassword(password);
 	}
+
+	async getUserInfo({ email }: UserLoginDto): Promise<UserModel | null> {
+		return this.usersRepository.find(email);
+	}
 }

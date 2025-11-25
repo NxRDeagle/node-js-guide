@@ -3,8 +3,8 @@ import { IsEmail, IsString } from 'class-validator';
 export class UserRegisterDto {
 	@IsEmail({}, { message: 'Incorrect email' })
 	email: string;
-	@IsString({ message: 'Empty password' })
+	@IsString({ message: 'Incorrect password' })
 	password: string;
-	@IsString({ message: 'Empty name' })
+	@IsString({ message: 'Incorrect name' })
 	name: string;
 }
