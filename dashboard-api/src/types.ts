@@ -10,6 +10,8 @@ export const TYPES = {
 	UserService: Symbol.for('UserService'),
 	ExceptionFilter: Symbol.for('ExceptionFilter'),
 	ConfigService: Symbol.for('ConfigService'),
+	PrismaService: Symbol.for('PrismaService'),
+	UsersRepository: Symbol.for('UsersRepository'),
 };
 
 export type ExpressFunction = (request: Request, response: Response, next: NextFunction) => void;
