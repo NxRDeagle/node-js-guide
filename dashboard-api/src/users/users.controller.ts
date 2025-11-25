@@ -65,10 +65,7 @@ export class UserController extends BaseController implements IUserController {
 		this.ok(response, { jwt });
 	}
 
-	async info({ user }: Request<{}, {}, UserLoginDto>, response: Response, next: NextFunction) {
-		if (typeof user === 'string') {
-			return;
-		}
+	async info({ user }: Request, response: Response, next: NextFunction) {
 		const userInfo = await this.userService.getUserInfo(user);
 		this.ok(response, { email: userInfo?.email, id: userInfo?.id });
 	}
